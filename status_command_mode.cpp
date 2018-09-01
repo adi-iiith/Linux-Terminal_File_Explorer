@@ -255,10 +255,12 @@ void status_command_mode(char  path[])
 			{
 				st>>spath;
 				// vector<string> search;
-
-				searchs.push_back(root);
-				searchs.push_back(spath);
-				search_filedir(spath,root);
+				string passs="-----------------"+spath+"-----------------";
+				searchs.push_back(passs);
+				// passs="/home/adi";
+				searchs.push_back(root1);
+				
+				search_filedir(spath,root1);
 				
 				search_print();
 				searchs.erase(searchs.begin(),searchs.end());
@@ -272,20 +274,24 @@ void status_command_mode(char  path[])
 
 			}
 
-			// else if(!(x.compare("snapshot")))
-			// {
-			// 	st>>spath;
-			// 	// st>>dpath;
-			// 	x=path;
-			// 	x+="/"+"Dump.txt";
-			// 	FILE *fp = fopen(x.c_str(),"w+");	
-			// 	fclose(fp);
-				
-
-
-
-
-			// }
+			else if(!(x.compare("snapshot")))
+			{
+				st>>spath;
+				st>>dpath;
+				spath=root+dpath;
+				x=path;
+				x=x+"/"+dpath;
+				FILE *fp = fopen(x.c_str(),"w+");	
+				fclose(fp);
+				snapshot(spath,x);
+				tcsetattr(0,TCSANOW,&initial_settings);
+				cout<<clear;
+				// tcsetattr(0,&initial_settings);
+				initial_settings.c_lflag &= ICANON;
+				initial_settings.c_lflag &= ECHO;
+				initial_settings.c_lflag &= ISIG;
+		 		break;
+			}
 
 			cout<<"\033[40;f";
 			cout<<"\033[K";
