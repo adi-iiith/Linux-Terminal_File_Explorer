@@ -13,15 +13,16 @@ void search_filedir(string pattern,string path)
 		while(i<x)
 		{
 			 str = name[i]->d_name;
-			 fpath=path+name[i]->d_name;
+			 fpath=path+str;
 			 string pass=path+"/"+str;
-			 stat(fpath.c_str(),&mystat);
+			 stat(pass.c_str(),&mystat);
 			 if(S_ISDIR(mystat.st_mode))
 			 {
 			 	if(!pattern.compare(str))
 			 	{
-			 		searchs.push_back(pass);
+			 		searchs.push_back(fpath);
 			 	}
+			 	fpath=path+"/"+str;
 
 			 	search_filedir(pattern,fpath);
 			 }
