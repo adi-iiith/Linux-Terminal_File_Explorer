@@ -278,14 +278,20 @@ void status_command_mode(char  path[])
 			{
 				st>>spath;
 				st>>dpath;
-				spath=root+dpath;
+				spath=root+spath;
 				x=path;
-				x=x+"/"+dpath;
+				x=spath+"/"+dpath;
 				FILE *fp = fopen(x.c_str(),"w+");	
 				fclose(fp);
 				snapshot(spath,x);
+				// cout<<spath<<" "<<x;
+				char buf[PATH_MAX + 1];
+				char *temp = realpath(path,buf);
+				ls(buf);
 				tcsetattr(0,TCSANOW,&initial_settings);
 				cout<<clear;
+				tcsetattr(0,TCSANOW,&initial_settings);
+				// cout<<clear;
 				// tcsetattr(0,&initial_settings);
 				initial_settings.c_lflag &= ICANON;
 				initial_settings.c_lflag &= ECHO;
