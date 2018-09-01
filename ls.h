@@ -17,7 +17,7 @@
 #include<unistd.h>
 #include<sstream>
 #include<fcntl.h>
-
+#include<queue>
 /* ################################################################################## 
 ##########################Define escape sequences ##################################*/
 
@@ -58,8 +58,7 @@ void copy_filedir(string spath , string dpath);
 void remove_filedir(string dpath);
 void search_filedir(string pattern,string path);
 void search_print();
-
-// void snapshot(string path,string fname);
+void snapshot(string path,string fname);
 
 
 // void create_dirfile(string y,string dpath,int flag);
