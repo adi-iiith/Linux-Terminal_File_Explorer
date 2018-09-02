@@ -258,7 +258,8 @@ void status_command_mode(char  path[])
 				string passs="-----------------"+spath+"-----------------";
 				searchs.push_back(passs);
 				// passs="/home/adi";
-				searchs.push_back(root1);
+				passs=path;
+				searchs.push_back(passs);
 				
 				search_filedir(spath,root1);
 				

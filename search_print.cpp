@@ -41,11 +41,13 @@ void search_print()
 
 				cpos--;
 				cout<<KEY_UP;
+				continue;
 			}
 			else if ( uinput1 == BRAC && uinput2 == B && cpos<=x)
 			{
 				cpos++;
 				cout<<KEY_DOWN;
+				continue; 
 			}
 			
 		}
@@ -53,7 +55,7 @@ void search_print()
 		{
 			 tcsetattr(0,TCSANOW,&initial_settings);
 			 cout<<clear;
-			// tcsetattr(0,&initial_settings);
+			
 			 initial_settings.c_lflag &= ICANON;
 			 initial_settings.c_lflag &= ECHO;
 			 initial_settings.c_lflag &= ISIG;
