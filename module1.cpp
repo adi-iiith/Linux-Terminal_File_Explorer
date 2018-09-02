@@ -25,6 +25,7 @@ vector<string> searchs;
 
 int main()
 {	
+	freopen("stderr.log","w",stderr);
 	struct passwd *pw = getpwuid(getuid());
 	const char *homedir = pw->pw_dir;                       //get home path 
 
@@ -33,10 +34,11 @@ int main()
 
 	strcpy(s,cwd);
 	root = homedir;
+	root1=root;
 	root += +"/";
-	// root = "/home/adi";
+	// root1 = "/home/adi";
 	// root1=cwd;
-	root1=homedir;
+	// root1=cwd;
 	// root1=cwd;
 
 

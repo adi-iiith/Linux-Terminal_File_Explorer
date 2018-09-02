@@ -6,8 +6,8 @@ void search_filedir(string pattern,string path)
 
 		struct stat mystat;
 		struct dirent **name;
-		
-		unsigned int x = scandir(path.c_str(), &name,NULL,alphasort);
+		chdir(path.c_str());
+		unsigned int x = scandir(".", &name,NULL,alphasort);
 		unsigned int i=2;
 		string str,fpath;
 		while(i<x)

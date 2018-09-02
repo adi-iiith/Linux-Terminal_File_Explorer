@@ -43,7 +43,7 @@ void search_print()
 				cout<<KEY_UP;
 				continue;
 			}
-			else if ( uinput1 == BRAC && uinput2 == B && cpos<=x)
+			else if ( uinput1 == BRAC && uinput2 == B && cpos<x)
 			{
 				cpos++;
 				cout<<KEY_DOWN;
@@ -81,7 +81,7 @@ void search_print()
 						
 			}
 			else {
-				if(cpos!=x-1)
+				if(cpos!=x)
 				{
 						// cpos--;
 						// int temp = cpos;

@@ -262,7 +262,7 @@ void status_command_mode(char  path[])
 				searchs.push_back(passs);
 				
 				search_filedir(spath,root1);
-				
+				searchs.push_back("END OF RESULT");
 				search_print();
 				searchs.erase(searchs.begin(),searchs.end());
 				tcsetattr(0,TCSANOW,&initial_settings);
