@@ -79,6 +79,8 @@ void search_print()
 						
 			}
 			else {
+				if(cpos!=x-1)
+				{
 						// cpos--;
 						// int temp = cpos;
 						pid_t pid;
@@ -97,6 +99,26 @@ void search_print()
 						initial_settings.c_lflag &= ECHO;
 						initial_settings.c_lflag &= ISIG;
 				 		break;
+				}
+				else if(cpos ==x-1)
+				{
+						pid_t pid;
+						pid=fork();
+						if(pid==0)
+						{
+							execl("/usr/bin/xdg-open","xdg-open",searchs[cpos-1].c_str(), (char*)0 ) ;
+						}
+						char *temp = realpath(searchs[x-2].c_str(),buf);
+						// searchs.erase(searchs.begin(),searchs.end());
+						search_print();
+						tcsetattr(0,TCSANOW,&initial_settings);
+						cout<<clear;
+						// tcsetattr(0,&initial_settings);
+						initial_settings.c_lflag &= ICANON;
+						initial_settings.c_lflag &= ECHO;
+						initial_settings.c_lflag &= ISIG;
+				 		break;
+				}
 			}
 		}
 	}

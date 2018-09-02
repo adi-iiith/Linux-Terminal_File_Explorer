@@ -13,7 +13,8 @@ void search_filedir(string pattern,string path)
 		while(i<x)
 		{
 			 str = name[i]->d_name;
-			 fpath=path+str;
+			 // fpath=path+str;
+			 fpath=path+"/"+str;
 			 string pass=path+"/"+str;
 			 stat(pass.c_str(),&mystat);
 			 if(S_ISDIR(mystat.st_mode))
