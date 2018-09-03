@@ -32,6 +32,7 @@ void snapshot(string path,string filep)
 	while (!sshot.empty())
 	  {
 	  	string pa=sshot.front();
+
 	  	sshot.pop();
 	  	snapshot(pa,filep);
 	    // std::cout << ' ' << myqueue.front();

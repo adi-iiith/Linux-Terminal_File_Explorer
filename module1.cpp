@@ -34,7 +34,7 @@ int main()
 
 	strcpy(s,cwd);
 	root = homedir;
-	root1=root;
+	root1=cwd;
 	root += +"/";
 	// root1 = "/home/adi";
 	// root1=cwd;

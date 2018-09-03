@@ -28,6 +28,8 @@ void ls(char path[])
 	cout<<"\n";
 	cout<<"\n";
 	string y;
+	if(x>34)
+		x=34;
 	while (i<x) {
         
         // cout<<setw(20)<<left<<name[i]->d_name;

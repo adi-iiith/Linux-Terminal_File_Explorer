@@ -22,7 +22,8 @@ void cursor(char path[])
 	
 	f = chdir(buf);
 	x = scandir(".", &name,NULL,alphasort);
-
+	if(x>34)
+		x=34;
 	// tcgetattr(0,&initial_settings);
 	// new_settings = initial_settings;
 	// new_settings.c_lflag &= ~ICANON;
@@ -38,6 +39,7 @@ void cursor(char path[])
 	new_settings.c_lflag &= ~ECHO;
 	tcsetattr(0,TCSANOW,&new_settings);
 	fflush(stdout);
+
 
 	while(1)
 	{
