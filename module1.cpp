@@ -25,7 +25,7 @@ vector<string> searchs;
 
 int main()
 {	
-	freopen("stderr.log","w",stderr);
+	freopen("hahaaha.log","w",stderr);
 	struct passwd *pw = getpwuid(getuid());
 	const char *homedir = pw->pw_dir;                       //get home path 
 
