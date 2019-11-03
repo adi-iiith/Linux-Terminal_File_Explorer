@@ -32,11 +32,11 @@
 
  File explorer works in two modes. 
 
-	* The application is start in normal mode, which is the default User mode and used to explore the current directory and navigate around in the filesystem.
-	<br/>
-	* The root of the application is the directory where the application was started.
-	<br/>
-	* The last line of the display screen is to be used as status bar - to be used in normal and command-line modes.
+* The application is start in normal mode, which is the default User mode and used to explore the current directory and navigate around in the filesystem.
+<br/>
+* The root of the application is the directory where the application was started.
+<br/>
+* The last line of the display screen is to be used as status bar - to be used in normal and command-line modes.
 
 
 6. ### User Mode : 
@@ -82,7 +82,7 @@ rename abc.txt def.txt
 similar commands for copy, move and rename for directories
 ```
 
-	* **delete files and directories** 
+* **delete files and directories** 
 ```
 delete_file <file_path>
 delete_dir <directory_path>
@@ -93,7 +93,7 @@ delete_file ~/abc/def.txt.
 delete_dir ~/abc/def
 ```
 
-	* **goto** 
+* **goto** 
 ```
 goto <directory_path>
 ```
@@ -105,7 +105,7 @@ goto ~
 ```
 both absolute and relative path are supported
 ```
-	* **Search a file or folder given fullname.** 
+* **Search a file or folder given fullname.** 
 ```
 search <filename>
 ```
@@ -116,7 +116,7 @@ search abc.txt
 ```
 Searches for the given filename under the current directory recursively.
 ```
-	* **Snapshotting the filesystem and dump into a file** 
+* **Snapshotting the filesystem and dump into a file** 
 ```
 snapshot <folder> <dumpfile>​
 ```
@@ -124,18 +124,18 @@ snapshot <folder> <dumpfile>​
 Eg:
 snapshot ~/foobar/ abc
 ```
-		* Given a base directory this command recursively crawl the directory and store the output in dumpfile.
+* Given a base directory this command recursively crawl the directory and store the output in dumpfile.
 
-		* Given a base directory this command recursively crawl the directory and store the output in dumpfile.
+* Given a base directory this command recursively crawl the directory and store the output in dumpfile.
 
-		* It is similar to ```ls -R``` command of Linux. 
+* It is similar to ```ls -R``` command of Linux. 
 
 
 * **On pressing ```ESC``` key the application goes to Normal Mode**
 
 8. ### Exit :
 
-	* Pressing ```q or Q``` exits the application. 
+* Pressing ```q or Q``` exits the application. 
 
 
 
