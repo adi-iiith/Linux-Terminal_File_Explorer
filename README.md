@@ -1,6 +1,5 @@
 # Project :  Linux Terminal Based File Explorer
 
-### Aditya Tewari
 
 ### Basic Requirements
 
