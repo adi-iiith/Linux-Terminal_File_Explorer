@@ -7,4 +7,6 @@ OBJ = cursor_h.o ls.o status_user_mode.o status_command_mode.o copy_filedir.o re
 
 module1: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
-
+	
+clean:
+	rm -rf *o module1
